@@ -1,0 +1,42 @@
+print("Welcome to Expense Manager")
+# expense manager program
+
+balance = 0
+transactions = []
+
+while True:
+    print("\nExpense Manager")
+    print("Income added successfully!")
+    print("2. Add Expense")
+    print("3. Show Balance")
+    print("4. Show Transactions")
+    print("5. Exit")
+
+    choice = input("Enter choice: ")
+
+    if choice == "1":
+        inc = float(input("Enter income: "))
+        balance = balance + inc
+        transactions.append("Income added: " + str(inc))
+        print("Income added")
+
+    elif choice == "2":
+        exp = float(input("Enter expense: "))
+        balance = balance - exp
+        transactions.append("Expense added: " + str(exp))
+        print("Expense added")
+
+    elif choice == "3":
+        print("Your balance is:", balance)
+
+    elif choice == "4":
+        print("All transactions:")
+        for t in transactions:
+            print(t)
+
+    elif choice == "5":
+        print("Thank you!")
+        break
+
+    else:
+        print("Wrong choice")
